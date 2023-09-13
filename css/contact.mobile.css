@@ -6,6 +6,10 @@
     text-decoration: none;
 }
 
+a:visited {
+    color: white;
+}
+
 /*  Header */
 
 header {
