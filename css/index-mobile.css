@@ -1,0 +1,431 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Livvic', sans-serif;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+/* header */
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem 0 1rem;
+    text-align: center;
+    background-color: #014e56;
+}
+
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 4rem;
+}
+
+.logo {
+    width: 120px;
+}
+
+/* hamburger button */
+
+.hamburger-button {
+    position: relative;
+    display: block;
+    width: 35px;
+    cursor: pointer;
+    z-index: 99;
+}
+
+.hamburger-button .bar, .hamburger-button::after, .hamburger-button::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: #fff;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.hamburger-button.is-active::before {
+    transform: rotate(-45deg) translate(-8px, 6px);
+}
+
+.hamburger-button.is-active::after {
+    transform: rotate(45deg) translate(-9px, -8px);
+}
+
+.hamburger-button.is-active .bar {
+    opacity: 0;
+}
+
+header h2 {
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+header h2 span {
+    color: #F67E7E;
+}
+
+header p {
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 5rem;
+    line-height: 28px;
+    padding: 0.5rem;
+    color: white;
+}
+
+.find-talent hr {
+    display: none;
+}
+
+.find-talent-svg {
+    display: none;
+}
+
+/* MOBILE NAV */
+
+nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #004047;
+    z-index: 98;
+    overflow: hidden;
+    transition: 0.4s;
+}
+
+nav.is-active {
+    right: 0;
+}
+
+.website-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    margin: 50% 5rem;
+    text-align: start;
+}
+
+.links a {
+    margin-bottom: 3rem;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+}
+
+.nav-svg {
+    position: absolute;
+    bottom: 0;
+    right: -100px;
+}
+
+.links button {   
+    padding: 1rem 1rem;
+    width: 159px;
+    border-radius: 30px;
+    background-color: transparent;
+    border: solid white 2px;
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* MAIN */
+
+/* upper main */
+
+.upper-main {
+    position: relative;
+    padding: 4rem 1.5rem;
+    overflow: hidden;
+    background-color: #012F34;
+}
+
+.main-pattern {
+    position: absolute;
+    right: -100px;
+    top: 0;
+}
+
+.upper-main hr {
+    width: 50px;
+    height: 3px;
+    background: #F67E7E;
+    border: none;
+    margin-bottom: 2rem;
+}
+
+.upper-main h2 {
+    font-size: 32px;
+    width: 60%;
+    font-weight: 700;
+    margin-bottom: 4rem;
+    color: white;
+}
+
+/* perks */
+
+
+.perks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.perk:nth-child(2) {
+    margin: 3rem 0;
+}
+
+.perk {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.perk h4 {
+    font-weight: 700;
+    font-size: 18px;
+    margin: 1rem 0;
+    color: #F67E7E;
+}
+
+.perk p {
+    font-size: 15px;
+    font-weight: 500;
+    color: white;
+}
+
+/* lower main */
+
+
+.lower-main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10rem 1.5rem 5rem 1.5rem;
+    background-color: #004047;
+}
+
+.lower-main svg {
+    position: absolute;
+}
+
+.review-svg {
+    left: 0;
+    top: 0;
+}
+
+.bottom-review-svg {
+    bottom: 0;
+    right: 0;
+}
+
+.lower-main h2 {
+    font-size: 32px;
+    line-height: 32px;
+    margin-bottom: 5rem;
+    color: white;
+}
+
+h2 span {
+    color: #79C8C7;
+}
+
+.lower-main img {
+    width: 62px;
+    border-radius: 50%;
+    border: solid white 1px;
+}
+
+/* reviews */
+
+.review {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.review svg {
+    top: -12%;
+    right: calc(50% - 33.5px);
+}
+
+.reviews {
+    display: flex;
+    flex-direction: column;
+}
+
+.reviews p {
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    line-height: 25px;
+    z-index: 2;
+    letter-spacing: 1.5px;
+}
+
+/* author */
+
+.author {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5rem;
+}
+
+.author img {
+    margin-top: 0.5rem;
+}
+
+.author * {
+    margin-bottom: 0.5rem;
+}
+
+.author span:nth-child(1) {
+    font-weight: 700;
+    font-size: 18px;
+    color: #79C8C7;
+}
+
+.author span:nth-child(2) {
+    font-size: 13px;
+    font-style: italic;
+    font-weight: 700;
+}
+
+/* footer */
+
+/* upper footer */
+
+.upper-footer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 350px;
+    overflow: hidden;
+    background-color: #F67E7E;
+}
+
+.upper-footer svg {
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+}
+
+.contact-us {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    width: 60%;
+}
+
+.contact-us h6 {
+    font-size: 32px;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    color: #012F34;
+}
+
+.contact-us button {
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    background-color: transparent;
+    border: solid #012F34 2px;
+    font-size: 20px;
+    color: #012F34;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.contact-us button:hover {
+    transition: 0.4s;
+    background-color: #002529;
+    color: white;
+}
+
+/* lower footer */
+
+
+.lower-footer {
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #002529;
+}
+
+.home-about {
+    display: flex;
+    justify-content: space-between;
+    width: 120px;
+    margin: 1.5rem 0;
+}
+
+.home-about *:hover {
+    cursor: pointer;
+    color: #F67E7E;
+    transition: 0.4s;
+}
+
+.address li {
+    margin-bottom: 10px;
+    font-weight: 500;
+    color: gray;
+}
+
+.lower-footer a {
+    font-size: 15px;
+    font-weight: 500;
+    color: white;
+}
+
+.socials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.social-icons svg:hover {
+    fill: #F67E7E;
+    transition: 0.4s;
+}
+
+.social-icons svg {
+    fill: white;
+}
+
+.socials span {
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 1rem;
+    color: gray;
+}
+
+.socials ul {
+    display: flex;
+    width: 100px;
+    justify-content: space-between;
+}
